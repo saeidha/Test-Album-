@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol GalleryScenceInput: AnyObject
+protocol GallerySceneInput: AnyObject
 {
     /// Successfull Fetch Gallery items
     func successFetchedItems()
@@ -18,6 +18,8 @@ protocol GalleryScenceInput: AnyObject
 final class GallerySceneViewController: UIViewController{
     
     // MARK: - Public Property
+    var interactor: GalleryInteractorBusinessLogic?
+    var router: GallerySceneRouter?
     
     // MARK: - Private Property
     fileprivate lazy var loader: UIActivityIndicatorView = {
@@ -103,5 +105,16 @@ extension GallerySceneViewController: UICollectionViewDelegate, UICollectionView
         let width = view.frame.width / 3
         self.collectionCellSize = width
         return CGSize(width: width , height: width)
+    }
+}
+
+
+extension GallerySceneViewController: GallerySceneInput{
+    // MARK: - GalleryScene inputs
+    
+    func successFetchedItems() {
+    }
+    
+    func errorFetchingItems() {
     }
 }

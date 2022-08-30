@@ -14,9 +14,17 @@ protocol GallerySceneConfigurator {
 
 final class DefaultGallerySceneConfigurator: GallerySceneConfigurator {
     
-    // MARK: - Public Methods
+    // MARK: - GalleryScene Configurator
     func configured(_ vc: GallerySceneViewController) -> GallerySceneViewController {
-        
-     return vc
+
+        // VIP Architect setup
+        let interactor = GalleryInteractor()
+        let presenter = GalleryPresenter()
+        let router = GallerySceneRouter()
+        vc.interactor = interactor
+        vc.router = router
+        presenter.viewController = vc
+        interactor.presenter = presenter
+        return vc
     }
 }

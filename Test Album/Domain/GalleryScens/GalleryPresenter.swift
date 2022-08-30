@@ -10,18 +10,18 @@ import Foundation
 protocol GalleryPresentationBusinessLogic
 {
     /// Fetch Result and Show Items
-    func presentFetchResults()
+    func presentFetchResults(response: [PhotoModel.Fetch.Response]?, error: Error?)
 }
 
 class GalleryPresenter
 {
     // MARK: - Public Property
-    weak var viewController: GalleryScenceInput?
+    weak var viewController: GallerySceneInput?
 }
 
 extension GalleryPresenter: GalleryPresentationBusinessLogic{
     
     // MARK: - Presentation logic
-    func presentFetchResults() {
+    func presentFetchResults(response: [PhotoModel.Fetch.Response]?, error: Error?) {
     }
 }
