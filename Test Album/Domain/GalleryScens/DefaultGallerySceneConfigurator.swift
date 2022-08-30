@@ -18,6 +18,8 @@ final class DefaultGallerySceneConfigurator: GallerySceneConfigurator {
     func configured(_ vc: GallerySceneViewController) -> GallerySceneViewController {
 
         // VIP Architect setup
+        let networkWorker = GalleryNetworkWorker()
+        let dataWorker = GalleryCoreDataWorker()
         let interactor = GalleryInteractor()
         let presenter = GalleryPresenter()
         let router = GallerySceneRouter()
@@ -25,6 +27,8 @@ final class DefaultGallerySceneConfigurator: GallerySceneConfigurator {
         vc.router = router
         presenter.viewController = vc
         interactor.presenter = presenter
+        interactor.networkWorker = networkWorker
+        interactor.dataWorker = dataWorker
         return vc
     }
 }

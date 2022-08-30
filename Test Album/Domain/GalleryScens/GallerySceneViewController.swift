@@ -10,9 +10,9 @@ import UIKit
 protocol GallerySceneInput: AnyObject
 {
     /// Successfull Fetch Gallery items
-    func successFetchedItems()
+    func successFetchedItems(viewModel: [PhotoModel.Fetch.ViewModel])
     /// Fail Fetch Gallery items
-    func errorFetchingItems()
+    func errorFetchingItems(message: String)
 }
 
 final class GallerySceneViewController: UIViewController{
@@ -112,9 +112,26 @@ extension GallerySceneViewController: UICollectionViewDelegate, UICollectionView
 extension GallerySceneViewController: GallerySceneInput{
     // MARK: - GalleryScene inputs
     
-    func successFetchedItems() {
+    /// Handle fetch item successfully
+    func successFetchedItems(viewModel: [PhotoModel.Fetch.ViewModel]) {
+        if self.loader.isAnimating{
+            self.loader.stopAnimating()
+        }
+        
+        if refreshControl.isRefreshing {
+            self.refreshControl.endRefreshing()
+        }
+        self.photos = viewModel
+        self.galleryCollectionView.reloadData()
     }
     
-    func errorFetchingItems() {
+    /// Handle failing fetch condition
+    func errorFetchingItems(message: String) {
+        if refreshControl.isRefreshing {
+            self.refreshControl.endRefreshing()
+        }
+        if self.loader.isAnimating{
+            self.loader.stopAnimating()
+        }
     }
 }

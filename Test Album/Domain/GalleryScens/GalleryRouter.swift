@@ -26,9 +26,20 @@ final class GallerySceneRouter{
 extension GallerySceneRouter: GallerySceneRoutingLogic {
     
     // MARK: - GalleryScene routing logic
+    ///
     func showPhoto(viewModel: PhotoModel.Fetch.ViewModel) {
     }
     
+    /// Show alert for failure fetch condition
     func showLoadFailure(message: String) {
+        let alert = UIAlertController(title: message, message: "Plase try agian", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction!) in
+            alert.dismiss(animated: true)
+                })
+        alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { (action:UIAlertAction!) in
+            self.source?.reload()
+            
+        }))
+        source?.present(alert, animated: true)
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 protocol GalleryPresentationBusinessLogic
 {
     /// Fetch Result and Show Items
-    func presentFetchResults(response: [PhotoModel.Fetch.Response]?, error: Error?)
+    func presentFetchResults(response: [PhotoModel.Fetch.ViewModel]?, error: ManagerErrors?)
 }
 
 class GalleryPresenter
@@ -22,6 +22,15 @@ class GalleryPresenter
 extension GalleryPresenter: GalleryPresentationBusinessLogic{
     
     // MARK: - Presentation logic
-    func presentFetchResults(response: [PhotoModel.Fetch.Response]?, error: Error?) {
+    /// present fetch viewModel
+    func presentFetchResults(response: [PhotoModel.Fetch.ViewModel]?, error: ManagerErrors?) {
+        
+        if let error = error {
+            viewController?.errorFetchingItems(message: error.description)
+            
+        }
+        if let response = response {
+            viewController?.successFetchedItems(viewModel: response)
+        }
     }
 }
