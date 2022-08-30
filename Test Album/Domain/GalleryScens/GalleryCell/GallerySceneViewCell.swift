@@ -7,9 +7,16 @@
 
 import UIKit
 
+protocol GalleryCellScenceInput: AnyObject{
+    /// Successfull set image
+    func successFetchedPhoto(image: UIImage)
+}
+
 class GallerySceneViewCell: UICollectionViewCell {
     
     // MARK: - Public Property
+    var interactor: GalleryCellBusinessLogic?
+    var imageSize: Int?
     
     // MARK: - Private Property
     fileprivate lazy var image: UIImageView = {
@@ -28,7 +35,20 @@ class GallerySceneViewCell: UICollectionViewCell {
     }
     
     // MARK: - Public Methods
-
+    /// Setup gallery scene view cell configurator
+    func setup(_ dataSource: PhotoModel.Fetch.ViewModel){
+        let worker = GalleryCellWorker()
+        let interactor = GalleryCellInteractor()
+        let presenter = GalleryCellPresenter()
+        self.interactor = interactor
+        presenter.viewCell = self
+        interactor.presenter = presenter
+        interactor.worker = worker
+        interactor.dataStore = dataSource
+        
+        interactor.setImage(imageSize: imageSize)
+    }
+    
     // MARK: - Private Methods
     /// Setup UI Views
     fileprivate func setupViews() {
@@ -42,4 +62,14 @@ class GallerySceneViewCell: UICollectionViewCell {
         self.image.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
+}
+
+extension GallerySceneViewCell: GalleryCellScenceInput{
+    
+    /// Set image from fech request
+    func successFetchedPhoto(image: UIImage) {
+        DispatchQueue.main.async {
+                            self.image.image = image
+        }
+    }
 }

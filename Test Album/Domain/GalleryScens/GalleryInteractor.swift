@@ -24,7 +24,6 @@ class GalleryInteractor {
 
 extension GalleryInteractor: GalleryInteractorBusinessLogic {
     
-    
     // MARK: - Interactor logic
     /// Fetch Gallery with coredata or network call
     func loadGallery() {
@@ -32,7 +31,11 @@ extension GalleryInteractor: GalleryInteractorBusinessLogic {
             if error == true{
                 self.loadGalleryNetworkCall()
             }else{
+                if response?.count ?? 0 > 1 {
                 self.presenter?.presentFetchResults(response: response, error: nil)
+                }else{
+                    self.loadGalleryNetworkCall()
+                }
             }
         }, fail: { response, error in
             self.loadGalleryNetworkCall()

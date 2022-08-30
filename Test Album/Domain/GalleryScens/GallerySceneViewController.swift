@@ -46,15 +46,23 @@ final class GallerySceneViewController: UIViewController{
         self.title = "Gallery"
         self.navigationItem.rightBarButtonItem  = UIBarButtonItem(image: .init(systemName: "arrow.clockwise"), style: .plain, target: self, action: #selector(reload))
         self.refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        self.loader.startAnimating()
+        interactor?.loadGallery()
     }
     
     // MARK: - Public Methods
     /// reload Collections
     @objc func refresh(){
-        
+        self.photos = nil
+        self.galleryCollectionView.reloadData()
+        interactor?.reloadGallery()
     }
     /// reload Collections
     @objc func reload(){
+        self.loader.startAnimating()
+        self.photos = nil
+        self.galleryCollectionView.reloadData()
+        interactor?.reloadGallery()
         
     }
     
@@ -96,15 +104,26 @@ extension GallerySceneViewController: UICollectionViewDelegate, UICollectionView
     // Setup Collection View cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  String(describing: GallerySceneViewCell.self), for: indexPath) as? GallerySceneViewCell else{return UICollectionViewCell()}
-        
+        cell.imageSize = Int(self.collectionCellSize ?? 0)
+        if let config = photos?[indexPath.row]{
+            cell.setup(config)
+        }
         return cell
     }
     
     // Setup Collection View Cell Size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = view.frame.width / 3
+        let width = view.frame.width / 3 - 10
         self.collectionCellSize = width
         return CGSize(width: width , height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
     }
 }
 

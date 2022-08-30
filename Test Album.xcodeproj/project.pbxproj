@@ -23,6 +23,9 @@
 		36F0D14C28BE4E4B00DAAD52 /* GallerySceneViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14B28BE4E4B00DAAD52 /* GallerySceneViewCell.swift */; };
 		36F0D14F28BE698800DAAD52 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14E28BE698800DAAD52 /* NetworkHelper.swift */; };
 		36F0D15128BE6BC200DAAD52 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D15028BE6BC200DAAD52 /* CoreDataHelper.swift */; };
+		36F0D15328BE74A700DAAD52 /* GalleryCellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D15228BE74A700DAAD52 /* GalleryCellInteractor.swift */; };
+		36F0D15528BE74BA00DAAD52 /* GalleryCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D15428BE74BA00DAAD52 /* GalleryCellPresenter.swift */; };
+		36F0D15728BE74CD00DAAD52 /* GalleryCellWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D15628BE74CD00DAAD52 /* GalleryCellWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		36F0D14B28BE4E4B00DAAD52 /* GallerySceneViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySceneViewCell.swift; sourceTree = "<group>"; };
 		36F0D14E28BE698800DAAD52 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		36F0D15028BE6BC200DAAD52 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		36F0D15228BE74A700DAAD52 /* GalleryCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellInteractor.swift; sourceTree = "<group>"; };
+		36F0D15428BE74BA00DAAD52 /* GalleryCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellPresenter.swift; sourceTree = "<group>"; };
+		36F0D15628BE74CD00DAAD52 /* GalleryCellWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				36F0D14B28BE4E4B00DAAD52 /* GallerySceneViewCell.swift */,
+				36F0D15228BE74A700DAAD52 /* GalleryCellInteractor.swift */,
+				36F0D15428BE74BA00DAAD52 /* GalleryCellPresenter.swift */,
+				36F0D15628BE74CD00DAAD52 /* GalleryCellWorker.swift */,
 			);
 			path = GalleryCell;
 			sourceTree = "<group>";
@@ -220,13 +229,16 @@
 				36F0D13D28BE428300DAAD52 /* GalleryWorker.swift in Sources */,
 				36F0D14628BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift in Sources */,
 				36F0D13928BE425500DAAD52 /* GallerySceneViewController.swift in Sources */,
+				36F0D15328BE74A700DAAD52 /* GalleryCellInteractor.swift in Sources */,
 				367AD59528BE3DFD005713A9 /* AppDelegate.swift in Sources */,
 				36F0D13B28BE427600DAAD52 /* GalleryInteractor.swift in Sources */,
 				36F0D14C28BE4E4B00DAAD52 /* GallerySceneViewCell.swift in Sources */,
 				367AD59728BE3DFD005713A9 /* SceneDelegate.swift in Sources */,
 				36F0D14928BE4C5E00DAAD52 /* Photo.swift in Sources */,
 				36F0D15128BE6BC200DAAD52 /* CoreDataHelper.swift in Sources */,
+				36F0D15728BE74CD00DAAD52 /* GalleryCellWorker.swift in Sources */,
 				36F0D14428BE45C700DAAD52 /* UIViewExtentions.swift in Sources */,
+				36F0D15528BE74BA00DAAD52 /* GalleryCellPresenter.swift in Sources */,
 				367AD59F28BE3DFD005713A9 /* Test_Album.xcdatamodeld in Sources */,
 				36F0D14128BE42AA00DAAD52 /* GalleryRouter.swift in Sources */,
 			);
