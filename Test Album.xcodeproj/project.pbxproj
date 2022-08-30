@@ -20,6 +20,7 @@
 		36F0D14428BE45C700DAAD52 /* UIViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14328BE45C700DAAD52 /* UIViewExtentions.swift */; };
 		36F0D14628BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14528BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift */; };
 		36F0D14928BE4C5E00DAAD52 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14828BE4C5E00DAAD52 /* Photo.swift */; };
+		36F0D14C28BE4E4B00DAAD52 /* GallerySceneViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14B28BE4E4B00DAAD52 /* GallerySceneViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		36F0D14328BE45C700DAAD52 /* UIViewExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtentions.swift; sourceTree = "<group>"; };
 		36F0D14528BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGallerySceneConfigurator.swift; sourceTree = "<group>"; };
 		36F0D14828BE4C5E00DAAD52 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		36F0D14B28BE4E4B00DAAD52 /* GallerySceneViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySceneViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		36F0D13728BE422000DAAD52 /* GalleryScens */ = {
 			isa = PBXGroup;
 			children = (
+				36F0D14A28BE4E1400DAAD52 /* GalleryCell */,
 				36F0D14528BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift */,
 				36F0D13828BE425500DAAD52 /* GallerySceneViewController.swift */,
 				36F0D13A28BE427600DAAD52 /* GalleryInteractor.swift */,
@@ -118,6 +121,14 @@
 				36F0D14828BE4C5E00DAAD52 /* Photo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		36F0D14A28BE4E1400DAAD52 /* GalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				36F0D14B28BE4E4B00DAAD52 /* GallerySceneViewCell.swift */,
+			);
+			path = GalleryCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				36F0D13928BE425500DAAD52 /* GallerySceneViewController.swift in Sources */,
 				367AD59528BE3DFD005713A9 /* AppDelegate.swift in Sources */,
 				36F0D13B28BE427600DAAD52 /* GalleryInteractor.swift in Sources */,
+				36F0D14C28BE4E4B00DAAD52 /* GallerySceneViewCell.swift in Sources */,
 				367AD59728BE3DFD005713A9 /* SceneDelegate.swift in Sources */,
 				36F0D14928BE4C5E00DAAD52 /* Photo.swift in Sources */,
 				36F0D14428BE45C700DAAD52 /* UIViewExtentions.swift in Sources */,

@@ -28,9 +28,14 @@ final class GallerySceneViewController: UIViewController{
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         let collection = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collection.register(GallerySceneViewCell.self, forCellWithReuseIdentifier: String(describing: GallerySceneViewCell.self))
+        collection.dataSource = self
+        collection.delegate = self
         return collection
     }()
     fileprivate let refreshControl = UIRefreshControl()
+    fileprivate var photos: [PhotoModel.Fetch.ViewModel]?
+    fileprivate var collectionCellSize: CGFloat?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -76,4 +81,27 @@ final class GallerySceneViewController: UIViewController{
         self.loader.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
    
+}
+
+// Setup collection views
+extension GallerySceneViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    // Setup Collection View number of items
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos?.count ?? 0
+    }
+    
+    // Setup Collection View cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  String(describing: GallerySceneViewCell.self), for: indexPath) as? GallerySceneViewCell else{return UICollectionViewCell()}
+        
+        return cell
+    }
+    
+    // Setup Collection View Cell Size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = view.frame.width / 3
+        self.collectionCellSize = width
+        return CGSize(width: width , height: width)
+    }
 }
