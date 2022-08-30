@@ -17,6 +17,7 @@
 		36F0D13D28BE428300DAAD52 /* GalleryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D13C28BE428300DAAD52 /* GalleryWorker.swift */; };
 		36F0D13F28BE429700DAAD52 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D13E28BE429700DAAD52 /* GalleryPresenter.swift */; };
 		36F0D14128BE42AA00DAAD52 /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14028BE42AA00DAAD52 /* GalleryRouter.swift */; };
+		36F0D14428BE45C700DAAD52 /* UIViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14328BE45C700DAAD52 /* UIViewExtentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		36F0D13C28BE428300DAAD52 /* GalleryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryWorker.swift; sourceTree = "<group>"; };
 		36F0D13E28BE429700DAAD52 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
 		36F0D14028BE42AA00DAAD52 /* GalleryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
+		36F0D14328BE45C700DAAD52 /* UIViewExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		367AD59328BE3DFD005713A9 /* Test Album */ = {
 			isa = PBXGroup;
 			children = (
+				36F0D14228BE45AC00DAAD52 /* Extentions */,
 				36F0D13628BE41FF00DAAD52 /* Domain */,
 				367AD59428BE3DFD005713A9 /* AppDelegate.swift */,
 				367AD59628BE3DFD005713A9 /* SceneDelegate.swift */,
@@ -93,6 +96,14 @@
 				36F0D14028BE42AA00DAAD52 /* GalleryRouter.swift */,
 			);
 			path = GalleryScens;
+			sourceTree = "<group>";
+		};
+		36F0D14228BE45AC00DAAD52 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				36F0D14328BE45C700DAAD52 /* UIViewExtentions.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				367AD59528BE3DFD005713A9 /* AppDelegate.swift in Sources */,
 				36F0D13B28BE427600DAAD52 /* GalleryInteractor.swift in Sources */,
 				367AD59728BE3DFD005713A9 /* SceneDelegate.swift in Sources */,
+				36F0D14428BE45C700DAAD52 /* UIViewExtentions.swift in Sources */,
 				367AD59F28BE3DFD005713A9 /* Test_Album.xcdatamodeld in Sources */,
 				36F0D14128BE42AA00DAAD52 /* GalleryRouter.swift in Sources */,
 			);
