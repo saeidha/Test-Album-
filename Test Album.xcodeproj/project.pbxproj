@@ -31,6 +31,7 @@
 		36F0D16928BE7EDC00DAAD52 /* PhotoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16828BE7EDC00DAAD52 /* PhotoWorker.swift */; };
 		36F0D16B28BE7EE800DAAD52 /* PhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16A28BE7EE800DAAD52 /* PhotoPresenter.swift */; };
 		36F0D16D28BE7EFC00DAAD52 /* PhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16C28BE7EFC00DAAD52 /* PhotoRouter.swift */; };
+		36F0D16F28BE839100DAAD52 /* PhotoSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16E28BE839100DAAD52 /* PhotoSceneConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		36F0D16828BE7EDC00DAAD52 /* PhotoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWorker.swift; sourceTree = "<group>"; };
 		36F0D16A28BE7EE800DAAD52 /* PhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPresenter.swift; sourceTree = "<group>"; };
 		36F0D16C28BE7EFC00DAAD52 /* PhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRouter.swift; sourceTree = "<group>"; };
+		36F0D16E28BE839100DAAD52 /* PhotoSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSceneConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				36F0D16828BE7EDC00DAAD52 /* PhotoWorker.swift */,
 				36F0D16A28BE7EE800DAAD52 /* PhotoPresenter.swift */,
 				36F0D16C28BE7EFC00DAAD52 /* PhotoRouter.swift */,
+				36F0D16E28BE839100DAAD52 /* PhotoSceneConfigurator.swift */,
 			);
 			path = "Photo Scens";
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				36F0D16B28BE7EE800DAAD52 /* PhotoPresenter.swift in Sources */,
 				36F0D16728BE7ED100DAAD52 /* PhotoInteractor.swift in Sources */,
 				36F0D13928BE425500DAAD52 /* GallerySceneViewController.swift in Sources */,
+				36F0D16F28BE839100DAAD52 /* PhotoSceneConfigurator.swift in Sources */,
 				36F0D15328BE74A700DAAD52 /* GalleryCellInteractor.swift in Sources */,
 				367AD59528BE3DFD005713A9 /* AppDelegate.swift in Sources */,
 				36F0D13B28BE427600DAAD52 /* GalleryInteractor.swift in Sources */,

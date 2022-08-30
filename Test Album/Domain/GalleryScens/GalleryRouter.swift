@@ -19,15 +19,19 @@ final class GallerySceneRouter{
     // MARK: - Public Property
     var source: GallerySceneViewController?
     var dataSource: PhotoModel.Fetch.ViewModel?
-    weak var viewController: GallerySceneViewController?
+    weak var viewController: PhotoSceneViewController?
     
 }
 
 extension GallerySceneRouter: GallerySceneRoutingLogic {
     
     // MARK: - GalleryScene routing logic
-    ///
+    /// Show Photo Scens
     func showPhoto(viewModel: PhotoModel.Fetch.ViewModel) {
+        let vc = PhotoSceneViewController()
+        let photoSceneConfigurator = PhotoSceneConfigurator()
+        let scene = photoSceneConfigurator.configured(vc, dataSource: viewModel)
+        source?.navigationController?.pushViewController(scene, animated: true)
     }
     
     /// Show alert for failure fetch condition

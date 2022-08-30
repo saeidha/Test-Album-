@@ -90,7 +90,7 @@ final class GallerySceneViewController: UIViewController{
         self.loader.widthAnchor.constraint(equalToConstant: 50).isActive = true
         self.loader.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
-   
+    
 }
 
 // Setup collection views
@@ -118,10 +118,19 @@ extension GallerySceneViewController: UICollectionViewDelegate, UICollectionView
         return CGSize(width: width , height: width)
     }
     
+    // Select Item from collection view and show it
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let config = photos?[indexPath.row] {
+            router?.showPhoto(viewModel: config)
+        }
+    }
+    
+    // Set minimum item spacing collection view
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
     
+    // Set minimum line spacing collection view
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
