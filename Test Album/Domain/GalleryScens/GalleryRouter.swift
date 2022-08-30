@@ -12,7 +12,6 @@ final class GalleryViewController: UIViewController{
     // MARK: - Public Property
     
     // MARK: - Private Property
-    
     fileprivate lazy var loader: UIActivityIndicatorView = {
         return UIActivityIndicatorView()
     }()
@@ -26,7 +25,6 @@ final class GalleryViewController: UIViewController{
     fileprivate let refreshControl = UIRefreshControl()
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
@@ -36,24 +34,23 @@ final class GalleryViewController: UIViewController{
     }
     
     // MARK: - Public Method
-    
     /// reload Collections
     @objc func refresh(){
+        
     }
-    
     /// reload Collections
     @objc func reload(){
         
     }
-    // MARK: - Private Method
     
+    // MARK: - Private Method
     /// Setup UI Views
     fileprivate func setupViews(){
         
         self.loader.color = .black
         self.galleryCollectionView.backgroundColor = UIColor.white
         
-        self.view.addSubview(self.galleryCollectionView)
+        self.view.addSubviews(self.galleryCollectionView, self.loader)
         self.view.addSubview(self.loader)
         self.galleryCollectionView.addSubview(refreshControl)
         
