@@ -19,6 +19,8 @@ protocol PhotoSceneInput: AnyObject
 final class PhotoSceneViewController: UIViewController{
     
     // MARK: - Public Property
+    var interactor: PhotoBusinessLogic?
+    var router: PhotoSceneRouter?
     
     // MARK: - Private Property
     fileprivate lazy var imageView: UIImageView = {
@@ -37,6 +39,9 @@ final class PhotoSceneViewController: UIViewController{
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.setupViews()
+        interactor?.setTitle()
+        self.loader.startAnimating()
+        interactor?.showPhoto()
     }
     
     // MARK: - Private Methods
@@ -65,6 +70,10 @@ final class PhotoSceneViewController: UIViewController{
     // MARK: - Public Methods
     /// Reload photo
     func reload(){
+        DispatchQueue.main.async {
+            self.loader.startAnimating()
+            self.interactor?.reloadPhoto()
+        }
     }
     
     /// Handle hide navigation bar by tap
@@ -79,12 +88,19 @@ extension PhotoSceneViewController: PhotoSceneInput{
     // MARK: - PhotoScene inputs
     
     func fetchTitle(title: String) {
+        self.title = title
     }
-    
+    /// Successfull Fetch Photo set image
     func successFetchedPhoto(image: UIImage) {
+        self.loader.stopAnimating()
+        self.imageView.image = image
     }
-    
+    /// Fail image loading and show try again condition
     func errorFetchingPhoto(error: String) {
+        DispatchQueue.main.async {
+            self.loader.stopAnimating()
+            self.router?.showLoadFailure(message: error)
+        }
     }
     
     
