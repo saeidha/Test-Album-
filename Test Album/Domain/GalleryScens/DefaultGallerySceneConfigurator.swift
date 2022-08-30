@@ -23,6 +23,7 @@ final class DefaultGallerySceneConfigurator: GallerySceneConfigurator {
         let interactor = GalleryInteractor()
         let presenter = GalleryPresenter()
         let router = GallerySceneRouter()
+        router.source = vc
         vc.interactor = interactor
         vc.router = router
         presenter.viewController = vc

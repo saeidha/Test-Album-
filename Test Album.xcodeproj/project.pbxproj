@@ -170,12 +170,12 @@
 		36F0D16328BE7E0B00DAAD52 /* Photo Scens */ = {
 			isa = PBXGroup;
 			children = (
+				36F0D16E28BE839100DAAD52 /* PhotoSceneConfigurator.swift */,
 				36F0D16428BE7E3C00DAAD52 /* PhotoSceneViewController.swift */,
 				36F0D16628BE7ED100DAAD52 /* PhotoInteractor.swift */,
 				36F0D16828BE7EDC00DAAD52 /* PhotoWorker.swift */,
 				36F0D16A28BE7EE800DAAD52 /* PhotoPresenter.swift */,
 				36F0D16C28BE7EFC00DAAD52 /* PhotoRouter.swift */,
-				36F0D16E28BE839100DAAD52 /* PhotoSceneConfigurator.swift */,
 			);
 			path = "Photo Scens";
 			sourceTree = "<group>";

@@ -17,10 +17,8 @@ protocol GallerySceneRoutingLogic {
 final class GallerySceneRouter{
     
     // MARK: - Public Property
-    var source: GallerySceneViewController?
+    weak var source: GallerySceneViewController?
     var dataSource: PhotoModel.Fetch.ViewModel?
-    weak var viewController: PhotoSceneViewController?
-    
 }
 
 extension GallerySceneRouter: GallerySceneRoutingLogic {

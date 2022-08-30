@@ -30,7 +30,6 @@ extension PhotoSceneRouter: PhotoSceneRoutingLogic {
         })
         alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: { (action:UIAlertAction!) in
             self.source?.reload()
-            
         }))
         source?.present(alert, animated: true)
     }

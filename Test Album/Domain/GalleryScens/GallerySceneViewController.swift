@@ -155,6 +155,7 @@ extension GallerySceneViewController: GallerySceneInput{
     
     /// Handle failing fetch condition
     func errorFetchingItems(message: String) {
+        router?.showLoadFailure(message: message)
         if refreshControl.isRefreshing {
             self.refreshControl.endRefreshing()
         }

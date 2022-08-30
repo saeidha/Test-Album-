@@ -92,8 +92,10 @@ extension PhotoSceneViewController: PhotoSceneInput{
     }
     /// Successfull Fetch Photo set image
     func successFetchedPhoto(image: UIImage) {
-        self.loader.stopAnimating()
-        self.imageView.image = image
+        DispatchQueue.main.async {
+            self.loader.stopAnimating()
+            self.imageView.image = image
+        }
     }
     /// Fail image loading and show try again condition
     func errorFetchingPhoto(error: String) {
