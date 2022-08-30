@@ -26,6 +26,12 @@
 		36F0D15328BE74A700DAAD52 /* GalleryCellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D15228BE74A700DAAD52 /* GalleryCellInteractor.swift */; };
 		36F0D15528BE74BA00DAAD52 /* GalleryCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D15428BE74BA00DAAD52 /* GalleryCellPresenter.swift */; };
 		36F0D15728BE74CD00DAAD52 /* GalleryCellWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D15628BE74CD00DAAD52 /* GalleryCellWorker.swift */; };
+		36F0D16528BE7E3C00DAAD52 /* PhotoSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16428BE7E3C00DAAD52 /* PhotoSceneViewController.swift */; };
+		36F0D16728BE7ED100DAAD52 /* PhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16628BE7ED100DAAD52 /* PhotoInteractor.swift */; };
+		36F0D16928BE7EDC00DAAD52 /* PhotoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16828BE7EDC00DAAD52 /* PhotoWorker.swift */; };
+		36F0D16B28BE7EE800DAAD52 /* PhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16A28BE7EE800DAAD52 /* PhotoPresenter.swift */; };
+		36F0D16D28BE7EFC00DAAD52 /* PhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16C28BE7EFC00DAAD52 /* PhotoRouter.swift */; };
+		36F0D16F28BE839100DAAD52 /* PhotoSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D16E28BE839100DAAD52 /* PhotoSceneConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +56,12 @@
 		36F0D15228BE74A700DAAD52 /* GalleryCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellInteractor.swift; sourceTree = "<group>"; };
 		36F0D15428BE74BA00DAAD52 /* GalleryCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellPresenter.swift; sourceTree = "<group>"; };
 		36F0D15628BE74CD00DAAD52 /* GalleryCellWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellWorker.swift; sourceTree = "<group>"; };
+		36F0D16428BE7E3C00DAAD52 /* PhotoSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSceneViewController.swift; sourceTree = "<group>"; };
+		36F0D16628BE7ED100DAAD52 /* PhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInteractor.swift; sourceTree = "<group>"; };
+		36F0D16828BE7EDC00DAAD52 /* PhotoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWorker.swift; sourceTree = "<group>"; };
+		36F0D16A28BE7EE800DAAD52 /* PhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPresenter.swift; sourceTree = "<group>"; };
+		36F0D16C28BE7EFC00DAAD52 /* PhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRouter.swift; sourceTree = "<group>"; };
+		36F0D16E28BE839100DAAD52 /* PhotoSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSceneConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				36F0D13728BE422000DAAD52 /* GalleryScens */,
+				36F0D16328BE7E0B00DAAD52 /* Photo Scens */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -152,6 +165,19 @@
 				36F0D15028BE6BC200DAAD52 /* CoreDataHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		36F0D16328BE7E0B00DAAD52 /* Photo Scens */ = {
+			isa = PBXGroup;
+			children = (
+				36F0D16E28BE839100DAAD52 /* PhotoSceneConfigurator.swift */,
+				36F0D16428BE7E3C00DAAD52 /* PhotoSceneViewController.swift */,
+				36F0D16628BE7ED100DAAD52 /* PhotoInteractor.swift */,
+				36F0D16828BE7EDC00DAAD52 /* PhotoWorker.swift */,
+				36F0D16A28BE7EE800DAAD52 /* PhotoPresenter.swift */,
+				36F0D16C28BE7EFC00DAAD52 /* PhotoRouter.swift */,
+			);
+			path = "Photo Scens";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,11 +254,17 @@
 				36F0D13F28BE429700DAAD52 /* GalleryPresenter.swift in Sources */,
 				36F0D13D28BE428300DAAD52 /* GalleryWorker.swift in Sources */,
 				36F0D14628BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift in Sources */,
+				36F0D16928BE7EDC00DAAD52 /* PhotoWorker.swift in Sources */,
+				36F0D16B28BE7EE800DAAD52 /* PhotoPresenter.swift in Sources */,
+				36F0D16728BE7ED100DAAD52 /* PhotoInteractor.swift in Sources */,
 				36F0D13928BE425500DAAD52 /* GallerySceneViewController.swift in Sources */,
+				36F0D16F28BE839100DAAD52 /* PhotoSceneConfigurator.swift in Sources */,
 				36F0D15328BE74A700DAAD52 /* GalleryCellInteractor.swift in Sources */,
 				367AD59528BE3DFD005713A9 /* AppDelegate.swift in Sources */,
 				36F0D13B28BE427600DAAD52 /* GalleryInteractor.swift in Sources */,
+				36F0D16528BE7E3C00DAAD52 /* PhotoSceneViewController.swift in Sources */,
 				36F0D14C28BE4E4B00DAAD52 /* GallerySceneViewCell.swift in Sources */,
+				36F0D16D28BE7EFC00DAAD52 /* PhotoRouter.swift in Sources */,
 				367AD59728BE3DFD005713A9 /* SceneDelegate.swift in Sources */,
 				36F0D14928BE4C5E00DAAD52 /* Photo.swift in Sources */,
 				36F0D15128BE6BC200DAAD52 /* CoreDataHelper.swift in Sources */,
