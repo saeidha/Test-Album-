@@ -7,6 +7,14 @@
 
 import UIKit
 
+protocol GalleryScenceInput: AnyObject
+{
+    /// Successfull Fetch Gallery items
+    func successFetchedItems()
+    /// Fail Fetch Gallery items
+    func errorFetchingItems()
+}
+
 final class GallerySceneViewController: UIViewController{
     
     // MARK: - Public Property
