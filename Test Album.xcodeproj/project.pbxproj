@@ -12,12 +12,13 @@
 		367AD59F28BE3DFD005713A9 /* Test_Album.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 367AD59D28BE3DFD005713A9 /* Test_Album.xcdatamodeld */; };
 		367AD5A128BE3E02005713A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367AD5A028BE3E02005713A9 /* Assets.xcassets */; };
 		367AD5A428BE3E02005713A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367AD5A228BE3E02005713A9 /* LaunchScreen.storyboard */; };
-		36F0D13928BE425500DAAD52 /* GalleryScensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D13828BE425500DAAD52 /* GalleryScensViewController.swift */; };
+		36F0D13928BE425500DAAD52 /* GallerySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D13828BE425500DAAD52 /* GallerySceneViewController.swift */; };
 		36F0D13B28BE427600DAAD52 /* GalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D13A28BE427600DAAD52 /* GalleryInteractor.swift */; };
 		36F0D13D28BE428300DAAD52 /* GalleryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D13C28BE428300DAAD52 /* GalleryWorker.swift */; };
 		36F0D13F28BE429700DAAD52 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D13E28BE429700DAAD52 /* GalleryPresenter.swift */; };
 		36F0D14128BE42AA00DAAD52 /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14028BE42AA00DAAD52 /* GalleryRouter.swift */; };
 		36F0D14428BE45C700DAAD52 /* UIViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14328BE45C700DAAD52 /* UIViewExtentions.swift */; };
+		36F0D14628BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F0D14528BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +29,13 @@
 		367AD5A028BE3E02005713A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367AD5A328BE3E02005713A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367AD5A528BE3E02005713A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36F0D13828BE425500DAAD52 /* GalleryScensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScensViewController.swift; sourceTree = "<group>"; };
+		36F0D13828BE425500DAAD52 /* GallerySceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySceneViewController.swift; sourceTree = "<group>"; };
 		36F0D13A28BE427600DAAD52 /* GalleryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryInteractor.swift; sourceTree = "<group>"; };
 		36F0D13C28BE428300DAAD52 /* GalleryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryWorker.swift; sourceTree = "<group>"; };
 		36F0D13E28BE429700DAAD52 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
 		36F0D14028BE42AA00DAAD52 /* GalleryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
 		36F0D14328BE45C700DAAD52 /* UIViewExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtentions.swift; sourceTree = "<group>"; };
+		36F0D14528BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGallerySceneConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,8 @@
 		36F0D13728BE422000DAAD52 /* GalleryScens */ = {
 			isa = PBXGroup;
 			children = (
-				36F0D13828BE425500DAAD52 /* GalleryScensViewController.swift */,
+				36F0D14528BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift */,
+				36F0D13828BE425500DAAD52 /* GallerySceneViewController.swift */,
 				36F0D13A28BE427600DAAD52 /* GalleryInteractor.swift */,
 				36F0D13C28BE428300DAAD52 /* GalleryWorker.swift */,
 				36F0D13E28BE429700DAAD52 /* GalleryPresenter.swift */,
@@ -178,7 +181,8 @@
 			files = (
 				36F0D13F28BE429700DAAD52 /* GalleryPresenter.swift in Sources */,
 				36F0D13D28BE428300DAAD52 /* GalleryWorker.swift in Sources */,
-				36F0D13928BE425500DAAD52 /* GalleryScensViewController.swift in Sources */,
+				36F0D14628BE475100DAAD52 /* DefaultGallerySceneConfigurator.swift in Sources */,
+				36F0D13928BE425500DAAD52 /* GallerySceneViewController.swift in Sources */,
 				367AD59528BE3DFD005713A9 /* AppDelegate.swift in Sources */,
 				36F0D13B28BE427600DAAD52 /* GalleryInteractor.swift in Sources */,
 				367AD59728BE3DFD005713A9 /* SceneDelegate.swift in Sources */,
